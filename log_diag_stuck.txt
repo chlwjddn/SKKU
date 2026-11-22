@@ -1,0 +1,14 @@
+/home/wjd030828/RS/ease_v2.py:33: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  u = torch.as_tensor(df.userId.values, device=dev)
+group  pairs  item pop  max_sim  mean_sim hist co-occur  gap to #20 (std) EASE rank<=20  EASE rank (med) 5-star late in window
+  HIT    957      75.7    0.468    0.2014         90.1%              0.23         79.4%                9  36.9%          28.3%
+STUCK   2011      39.9    0.394    0.1419         81.2%             -0.41          9.6%               71  29.0%          34.7%
+   FP  10903      66.1    0.430    0.1997         88.7%              0.19         65.5%               14    NaN            NaN
+  FAR   4474      10.5    0.281    0.0621         44.0%             -1.66          0.0%              961  19.7%          36.7%
+
+STUCK breakdown
+  rank  21- 30: 14.8% of STUCK | EASE puts 33.6% of them in top-20
+  rank  31- 50: 21.7% of STUCK | EASE puts 15.4% of them in top-20
+  rank  51-100: 37.4% of STUCK | EASE puts  2.8% of them in top-20
+  rank 101-150: 26.1% of STUCK | EASE puts  1.0% of them in top-20
+  popularity of STUCK items: <=5:4% 6-20:30% 21-50:41% 51+:25%

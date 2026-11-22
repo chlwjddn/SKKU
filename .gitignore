@@ -1,0 +1,6 @@
+data/
+scores/
+logs/
+__pycache__/
+*.pt
+submission_*.csv

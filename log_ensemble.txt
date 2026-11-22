@@ -1,0 +1,18 @@
+== singles ==
+best epoch 25  val NDCG@20 0.12830  (31s)
+best epoch 65  val NDCG@20 0.13704  (41s)
+[val] best ep 140  ndcg@20 0.1512
+[val] best ep 150  ndcg@20 0.1509
+best epoch 200  val NDCG@20 0.16453  (37s)
+best epoch 380  val NDCG@20 0.16540  (54s)
+== blend_seed (7 models) ==
+pass 1: val 0.17863  weights {'lgcn_best': 1.0, 'lg_s7': 0.0, 'lg_s26': 0.0, 'ease': 0.1, 'fut7_2ch': 1.0, 'fut_s7': 1.0, 'fut_s26': 0.1}
+pass 2: val 0.17977  weights {'lgcn_best': 1.5, 'lg_s7': 0.7, 'lg_s26': 0.5, 'ease': 0.1, 'fut7_2ch': 1.0, 'fut_s7': 1.0, 'fut_s26': 0.2}
+pass 3: val 0.18004  weights {'lgcn_best': 1.5, 'lg_s7': 1.0, 'lg_s26': 0.05, 'ease': 0.1, 'fut7_2ch': 1.0, 'fut_s7': 1.0, 'fut_s26': 0.2}
+saved submission_blend_seed.csv  (val 0.18004)
+== blend9 (+ real LightGCN x2) ==
+pass 1: val 0.17877  weights {'lgcn_best': 1.0, 'lg_s7': 0.0, 'lg_s26': 0.0, 'ease': 0.1, 'fut7_2ch': 1.0, 'fut_s7': 1.0, 'fut_s26': 0.1, 'lgb_s0': 0.0, 'lgb_s7': 0.2}
+pass 2: val 0.17904  weights {'lgcn_best': 1.0, 'lg_s7': 0.0, 'lg_s26': 0.0, 'ease': 0.1, 'fut7_2ch': 1.0, 'fut_s7': 1.0, 'fut_s26': 0.2, 'lgb_s0': 0.0, 'lgb_s7': 0.1}
+pass 3: val 0.17971  weights {'lgcn_best': 2.0, 'lg_s7': 1.0, 'lg_s26': 0.0, 'ease': 0.1, 'fut7_2ch': 1.0, 'fut_s7': 1.0, 'fut_s26': 0.2, 'lgb_s0': 0.0, 'lgb_s7': 0.1}
+saved submission_blend9.csv  (val 0.17971)
+baseline to beat: blend4 val 0.1779

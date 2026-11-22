@@ -1,0 +1,31 @@
+device: cuda | {'data': '/home/wjd030828/RS/data', 'thr': 4.0, 'factors': 32, 'mlp_dim': 64, 'neg': 4, 'lr': 0.001, 'wd': 0.0, 'drop': 0.0, 'batch': 2048, 'epochs': 200, 'eval_every': 2, 'patience': 10, 'seed': 42, 'no_final': False, 'tag': 'neumf'}
+/home/wjd030828/RS/ease_v2.py:33: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  u = torch.as_tensor(df.userId.values, device=dev)
+ep    2  loss 23.59  val NDCG@20 0.09266 *
+ep    4  loss 20.74  val NDCG@20 0.09314 *
+ep    6  loss 19.18  val NDCG@20 0.09725 *
+ep    8  loss 17.01  val NDCG@20 0.10315 *
+ep   10  loss 14.94  val NDCG@20 0.10951 *
+ep   12  loss 13.08  val NDCG@20 0.10926
+ep   14  loss 11.69  val NDCG@20 0.11575 *
+ep   16  loss 10.75  val NDCG@20 0.11455
+ep   18  loss 9.91  val NDCG@20 0.11761 *
+ep   20  loss 9.34  val NDCG@20 0.11766 *
+ep   22  loss 8.85  val NDCG@20 0.11836 *
+ep   24  loss 8.47  val NDCG@20 0.11954 *
+ep   26  loss 8.12  val NDCG@20 0.11860
+ep   28  loss 7.70  val NDCG@20 0.11816
+ep   30  loss 7.59  val NDCG@20 0.11962 *
+ep   32  loss 7.34  val NDCG@20 0.12157 *
+ep   34  loss 7.14  val NDCG@20 0.11821
+ep   36  loss 6.97  val NDCG@20 0.11571
+ep   38  loss 6.81  val NDCG@20 0.11783
+ep   40  loss 6.54  val NDCG@20 0.11946
+ep   42  loss 6.56  val NDCG@20 0.11915
+ep   44  loss 6.38  val NDCG@20 0.12058
+ep   46  loss 6.41  val NDCG@20 0.11542
+ep   48  loss 6.39  val NDCG@20 0.11614
+ep   50  loss 6.15  val NDCG@20 0.11854
+ep   52  loss 6.03  val NDCG@20 0.11648
+best epoch 32  val NDCG@20 0.12157  (23s)
+saved submission_neumf.csv  (val 0.12157, epochs 32)
